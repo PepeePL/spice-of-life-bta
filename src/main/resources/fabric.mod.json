@@ -1,26 +1,26 @@
 {
 	"schemaVersion": 1,
-	"id": "examplemod",
+	"id": "spice-of-life-bta",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This mod aims to help new BTA modders.",
+	"name": "Spice of Life: BTA",
+	"description": "A mod that makes ",
 	"authors": [
-		"Turnip Labs"
+		"Pepee"
 	],
 	"contact": {
 		"homepage": "",
 		"sources": ""
 	},
 	"icon": "icon.png",
-	"license": "CC0-1.0",
+	"license": "GPL-2.0",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"turniplabs.examplemod.ExampleMod"
+			"qapy.spiceoflife.SpiceOfLifeMod"
 		]
 	},
 	"mixins": [
-		"examplemod.mixins.json"
+		"spiceoflife.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=${fabricloader}",

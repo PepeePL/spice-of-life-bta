@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "qapy.spiceoflife.mixin",
+  "compatibilityLevel": "JAVA_${java}",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "ConsumedFoodMixin",
+    "MobMixin",
+    "PlayerMixin"
+  ],
+  "client": [
+    "HudComponentHealthBarMixin"
+  ]
+}
