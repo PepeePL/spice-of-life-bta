@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "spice-of-life-bta",
+	"id": "spiceoflife",
 	"version": "${version}",
 	"name": "Spice of Life: BTA",
-	"description": "A mod that makes ",
+	"description": "A mod that implements the classic Spice of Life mod into BTA! food system",
 	"authors": [
 		"Pepee"
 	],

@@ -21,13 +21,11 @@ public class PlayerMixin implements FoodTrackerAccess {
 		return pepeethings$foodTracker;
 	}
 	@Inject(method = "addAdditionalSaveData", at = @At("TAIL"))
-	public void addAdditionalSaveData(CompoundTag tag, CallbackInfo ci) {
-		// Save the food history to the player's NBT data
+	public void spiceOfLife$addAdditionalSaveData(CompoundTag tag, CallbackInfo ci) {
 		tag.put("FoodHistory", pepeethings$foodTracker.save(new ListTag()));
 	}
 	@Inject(method = "readAdditionalSaveData", at = @At("TAIL"))
-	public void readAdditionalSaveData(CompoundTag tag, CallbackInfo ci) {
-		// Save the food history to the player's NBT data
+	public void spiceOfLife$readAdditionalSaveData(CompoundTag tag, CallbackInfo ci) {
 		this.pepeethings$foodTracker.load(tag.getList("FoodHistory"));
 	}
 }

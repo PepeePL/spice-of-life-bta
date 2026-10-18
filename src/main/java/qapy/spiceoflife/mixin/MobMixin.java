@@ -10,7 +10,7 @@ import qapy.spiceoflife.FoodTrackerAccess;
 @Mixin(Mob.class)
 public class MobMixin {
 	@Inject(method = "eatFood", at = @org.spongepowered.asm.mixin.injection.At("TAIL"))
-	public void addToList(ItemStack stack, CallbackInfo ci) {
+	public void spiceOfLife$addToList(ItemStack stack, CallbackInfo ci) {
 		Mob mob = (Mob) (Object) this;
 		if (mob instanceof FoodTrackerAccess foodTrackerAccess) {
 			foodTrackerAccess.spice_of_life_bta$getFoodTracker().addToList(stack);

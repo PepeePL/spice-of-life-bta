@@ -4,6 +4,7 @@ import com.mojang.nbt.tags.CompoundTag;
 import com.mojang.nbt.tags.ListTag;
 import net.minecraft.core.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
+import qapy.spiceoflife.util.SuperFoodsRegistry;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -15,9 +16,8 @@ public class FoodTracker {
 	public FoodTracker() {}
 
 	public void addToList(ItemStack stack) {
-		ItemStack foodStack = stack.copy();
-		foodStack.stackSize = 1;
-		this.foodHistory.add(foodStack);
+		if (SuperFoodsRegistry.isSuperfood(stack)) return;
+		this.foodHistory.add(stack);
 		if (this.foodHistory.size() > MAX_FOODS) {
 			this.foodHistory.removeFirst();
 		}
