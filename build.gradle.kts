@@ -1,6 +1,7 @@
 plugins {
 	alias(libs.plugins.loom)
     java
+	`maven-publish`
 }
 
 val lwjglNatives = resolveLwjglNatives()
@@ -158,6 +159,16 @@ fun resolveLwjglNatives(): String { // Sourced from https://www.lwjgl.org/
 					"natives-windows-x86"
 			else ->
 				throw Error("Unrecognized or unsupported platform. Please set \"lwjglNatives\" manually")
+		}
+	}
+}
+
+group = "com.github.PepeePL"
+
+publishing {
+	publications {
+		create<MavenPublication>("maven") {
+			from(components["java"])
 		}
 	}
 }
